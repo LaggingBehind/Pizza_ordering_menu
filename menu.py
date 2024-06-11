@@ -1,5 +1,7 @@
 import time
 
+#Menu and prices
+
 menu_items = {
     "Large pizza": 12.99,
     "Medium pizza": 10.99,
@@ -17,12 +19,19 @@ drinks = {
     "Sprite": 1.50,
     "Wine": 3.00,
     "Water": 1.00}
+order_list = []
 
 def hello_message():
     print("Welcome to Cheesus Crust Pizza!")
     print("How may we serve thee?")
-    pizza_topping()
     
+    pizza_size()
+def pizza_size():
+        size = ["Large",
+                "Medium",
+                "Small"]
+        
+    pizza_topping()
 def pizza_topping():
     toppings = ["Mushroom",
                 "Sausage",
