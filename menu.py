@@ -29,5 +29,9 @@ def soft_drinks():
     request = input("Enter your sacrament: ")
     if request in drinks:
         print(request, "Is available")
-        thank_customer()
+    else:
+        print("Processing...")
+        time.sleep(1)
+        print("This Scrament is not available")
+        
         
