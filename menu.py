@@ -12,7 +12,12 @@ toppings = {
     "Cheese": 1.00}
 
 drinks = {
-    "Coke": 1.50}
+    "Coke": 1.50,
+    "Mountian Dew": 1.50,
+    "Sprite": 1.50,
+    "Wine": 3.00,
+    "Water": 1.00}
+
 def hello_message():
     print("Welcome to Cheesus Crust Pizza!")
     print("How may we serve thee?")
