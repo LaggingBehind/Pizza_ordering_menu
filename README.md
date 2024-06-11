@@ -1,2 +1,3 @@
 # python-challenge-1
-Interactive food menu
+# Interactive food menu
+print
