@@ -10,9 +10,10 @@ def pizza_topping():
                 "Sausage",
                 "pepperoni",
                 "Cheese"]
-    request = ("Please enter a topping: ")
+    request = input("What would you like on your body of crust?: ")
     if request in toppings:
-        print(request, "Are available")
+        print(request, "Is available")
+        soft_drinks()
     else:
         print("Processing...")
         time.sleep(1)
@@ -29,9 +30,13 @@ def soft_drinks():
     request = input("Enter your sacrament: ")
     if request in drinks:
         print(request, "Is available")
+        thank_customer()
     else:
         print("Processing...")
         time.sleep(1)
         print("This Scrament is not available")
         
-        
+def thank_customer():
+    print("Have a blessed day")
+    
+hello_message()
