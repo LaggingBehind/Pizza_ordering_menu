@@ -1,4 +1,5 @@
 import time
+from urllib import request
 
 #Menu and prices
 
@@ -29,9 +30,18 @@ def hello_message():
 def pizza_size():
         size = ["Large",
                 "Medium",
-                "Small"]
-        
+                "Small"]   
+request = input("what size pizza would you like?: ")
+if request in pizza_size:
+    print("Size available")
     pizza_topping()
+else:
+        print("processing")
+        time.sleep(1)
+        print(request,"Sorry not available")
+        quit()
+        
+        pizza_topping()
 def pizza_topping():
     toppings = ["Mushroom",
                 "Sausage",
