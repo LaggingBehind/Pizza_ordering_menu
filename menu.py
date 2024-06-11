@@ -11,7 +11,7 @@ menu_items = {
 toppings = {
     "Mushroom": 1.50,
     "Sausage": 2.00,
-    "pepperoni": 1.75,
+    "Pepperoni": 1.75,
     "Cheese": 1.00}
 
 drinks = {
@@ -20,11 +20,16 @@ drinks = {
     "Sprite": 1.50,
     "Wine": 3.00,
     "Water": 1.00}
+
 order_list = []
+
+#Greet the customer
 
 def hello_message():
     print("Welcome to Cheesus Crust Pizza!")
     print("How may we serve thee?")
+    
+#Begin order with size of pizza
     
     pizza_size()
 def pizza_size():
@@ -41,6 +46,8 @@ def pizza_size():
         print(request,"Sorry not available")
         quit()
         
+#Toppings selection
+        
         pizza_topping()
 def pizza_topping():
     toppings = ["Mushroom",
@@ -56,6 +63,8 @@ def pizza_topping():
         time.sleep(1)
         print(request,"Sorry not available")
         quit()
+        
+#Drink selection 
 
 def soft_drinks():
     print("Select a sacrament")
