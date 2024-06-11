@@ -1,12 +1,25 @@
 import time
 
+menu_items = {
+    "Large pizza": 12.99,
+    "Medium pizza": 10.99,
+    "Small pizza": 8.99}
+
+toppings = {
+    "Mushroom": 1.50,
+    "Sausage": 2.00,
+    "pepperoni": 1.75,
+    "Cheese": 1.00}
+
+drinks = {
+    "Coke": 1.50}
 def hello_message():
     print("Welcome to Cheesus Crust Pizza!")
     print("How may we serve thee?")
     pizza_topping()
     
 def pizza_topping():
-    toppings = ["Mushrooms",
+    toppings = ["Mushroom",
                 "Sausage",
                 "pepperoni",
                 "Cheese"]
