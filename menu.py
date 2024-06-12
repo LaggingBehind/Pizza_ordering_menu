@@ -29,57 +29,59 @@ order_list = []
 def hello_message():
     print("Welcome to Cheesus Crust Pizza!")
     print("How may we serve thee?")
+    pizza_size()
     
 #Begin order with size of pizza
 
-    
-    pizza_size()
 def pizza_size():
-    for size, price in menu_items.items():
-        print(f"{size}: ${price:.2f}")
+    while True:
+        print("\nPizza Sizes:")
+        for size, price in menu_items.items():
+            print(f"{size}: ${price:.2f}" if price else size)
         
-    size_selection = input("What size pizza would you like?: ")
-    
-    if size_selection not in menu_items.keys():
-        print("Invalid entry")
-        return 
+        size_selection = input("What size pizza would you like?: ")
+        
+        if size_selection not in menu_items.keys():
+            print("Invalid entry")
+            continue
+        return size_selection
      
         
-# #Toppings selection
+#Toppings selection
         
-#         pizza_topping()
-# def pizza_topping():
-#     toppings = ["Mushroom",
-#                 "Sausage",
-#                 "pepperoni",
-#                 "Cheese"]
-#     request = input("What would you like on your body of crust?: ")
-#     if request in toppings:
-#         print(request, "Is available")
-#         soft_drinks()
-#     else:
-#         print("Processing...")
-#         time.sleep(1)
-#         print(request,"Sorry not available")
-#         quit()
+        pizza_topping()
+def pizza_topping():
+    toppings = ["Mushroom",
+                "Sausage",
+                "pepperoni",
+                "Cheese"]
+    request = input("What would you like on your body of crust?: ")
+    if request in toppings:
+        print(request, "Is available")
+        soft_drinks()
+    else:
+        print("Processing...")
+        time.sleep(1)
+        print(request,"Sorry not available")
+        quit()
         
-# #Drink selection 
+#Drink selection 
 
-# def soft_drinks():
-#     print("Select a sacrament")
-#     drinks = ["Coke",
-#               "Mountain Dew",
-#               "Sprite",
-#               "Wine",
-#               "Water"]
-#     request = input("Enter your sacrament: ")
-#     if request in drinks:
-#         print(request, "Is available")
-#         thank_customer()
-#     else:
-#         print("Processing...")
-#         time.sleep(1)
-#         print("This Scrament is not available")
+def soft_drinks():
+    print("Select a sacrament")
+    drinks = ["Coke",
+              "Mountain Dew",
+              "Sprite",
+              "Wine",
+              "Water"]
+    request = input("Enter your sacrament: ")
+    if request in drinks:
+        print(request, "Is available")
+        thank_customer()
+    else:
+        print("Processing...")
+        time.sleep(1)
+        print("This Scrament is not available")
         
 def thank_customer():
     print("Have a blessed day")
