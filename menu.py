@@ -32,7 +32,7 @@ def soft_drinks():
     "Coke": 1.25,
     "Mountain Dew": 1.25,
     "Sprite": 1.25,
-    "Wine": (unavailable="We don't serve wine, friend"),
+    "Wine": (unavailable = "We don't serve wine, friend"),
     "Water": 0.50}
   request = input("Enter your sacrament: ")
   if request in drinks:
