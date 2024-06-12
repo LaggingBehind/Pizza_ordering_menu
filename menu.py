@@ -1,57 +1,12 @@
 import time
-from tkinter import Menu
-from urllib import request
-
-#Menu and prices
-
-menu_items = {
-    "Large pizza": 12.99,
-    "Medium pizza": 10.99,
-    "Small pizza": 8.99}
-
-toppings = {
-    "Mushroom": 1.50,
-    "Sausage": 2.00,
-    "Pepperoni": 1.75,
-    "Cheese": 1.00}
-
-drinks = {
-    "Coke": 1.50,
-    "Mountian Dew": 1.50,
-    "Sprite": 1.50,
-    "Wine": 3.00,
-    "Water": 1.00}
-
-order_list = []
-
-#Greet the customer
 
 def hello_message():
     print("Welcome to Cheesus Crust Pizza!")
     print("How may we serve thee?")
-    pizza_size()
+    pizza_topping()
     
-#Begin order with size of pizza
-
-def pizza_size():
-    while True:
-        print("\nPizza Sizes:")
-        for size, price in menu_items.items():
-            print(f"{size}: ${price:.2f}" if price else size)
-        
-        size_selection = input("What size pizza would you like?: ")
-        
-        if size_selection not in menu_items.keys():
-            print("Invalid entry")
-            continue
-        return size_selection
-     
-        
-#Toppings selection
-        
-        pizza_topping()
 def pizza_topping():
-    toppings = ["Mushroom",
+    toppings = ["Mushrooms",
                 "Sausage",
                 "pepperoni",
                 "Cheese"]
@@ -64,8 +19,6 @@ def pizza_topping():
         time.sleep(1)
         print(request,"Sorry not available")
         quit()
-        
-#Drink selection 
 
 def soft_drinks():
     print("Select a sacrament")
