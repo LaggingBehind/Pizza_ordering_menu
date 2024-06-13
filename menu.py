@@ -1,9 +1,36 @@
+from os import name
 import time
+
+order_list = []
+
+pizza_menu = {
+  1:{"name":"Large","price":9.99},
+  2:{"name":"Medium","price":6.99},
+  3:{"name":"Small","price":3.99},
+}
+
+toppings_menu = {
+  "Mushrooms":1.50,
+  "Sausage":2.00,
+  "Pepperoni":1.75,
+  "Cheese":1.00
+}
+
+drinks_menu = {
+  "Coke":1.25,
+  "Mountain Dew":1.25,
+  "Sprite":1.25,
+  "Water":0.50,
+  "Wine":"We dont5 serve wine, friend"
+}
+
+total_cost = 0  
+
 
 def hello_message():
   print("Welcome to Cheesus Crust Pizza!")
   print("How may we serve thee?")
-  pizza_topping()
+
 
 def pizza_topping():
   toppings = {
