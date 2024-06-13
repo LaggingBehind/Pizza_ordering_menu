@@ -24,10 +24,12 @@ drinks_menu = {
 
 total_cost = 0  
 
-
+# Greet customer
 def greet_customer():
   print("Welcome to Cheesus Crust Pizza!")
   print("How may we serve thee?")
+  
+# Size menu    
   
 def choose_pizza_size():
   global total_cost
@@ -36,17 +38,15 @@ def choose_pizza_size():
     print(f"{key}.{value['name']}-${value['price']:.2f}")
     
   while True:
-    try:
       size_choice=int(input("Enter the number corresponding to your choice:"))
       if size_choice in pizza_menu:
         select_pizza = pizza_menu[size_choice]
-        total_cost += size["price"]
-        order_list.append(size()["name"])
+        total_cost += select_pizza["price"]
+        order_list.append(select_pizza["name"])
         break
       else:print("Invalid selection. Please choose a menu item number")
-    ValueError:
-    print("Invalid, Please enter a number.")
 
+# Toppings menu
 
 def pizza_topping():
   global total_cost
