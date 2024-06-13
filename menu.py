@@ -19,13 +19,13 @@ drinks_menu = {
   "Mountain Dew":1.25,
   "Sprite":1.25,
   "Water":0.50,
-  "Wine":"We dont5 serve wine, friend"
+  "Wine":("We dont5 serve wine, friend")
 }
 
 total_cost = 0  
 
 
-def hello_message():
+def greet_customer():
   print("Welcome to Cheesus Crust Pizza!")
   print("How may we serve thee?")
   
@@ -40,11 +40,11 @@ def choose_pizza_size():
       size_choice=int(input("Enter the number corresponding to your choice:"))
       if size_choice in pizza_menu:
         select_pizza = pizza_menu[size_choice]
-        total_cost += selected_pizza["price"]
-        order_list.append(selected_pizza["name"])
+        total_cost += size["price"]
+        order_list.append(size()["name"])
         break
       else:print("Invalid selection. Please choose a menu item number")
-  exept ValueError:
+    ValueError:
     print("Invalid, Please enter a number.")
 
 
@@ -99,41 +99,13 @@ def ask_another_order():
     else:
       print("Invalid input. Please enter y or n")  
   
-#   request = input("What would you like on your body of crust?: ")
-#   if request in toppings:
-#     price = toppings.get(request)  # Use get() to handle cheese case
-#     if price:  # Check if price exists (cheese won't have a price)
-#       print(request, "is available for", f"${price:.2f}")  # Format price with 2 decimals
-#     else:
-#       print(toppings[request])  # Print the included message for cheese
-#     soft_drinks()
-#   else:
-#     print("Processing...")
-#     time.sleep(1)
-#     print(request, "Sorry not available")
-#     quit()
-
-
-#   drinks = {
-#     "Coke": 1.25,
-#     "Mountain Dew": 1.25,
-#     "Sprite": 1.25,
-#     "Wine": "We don't serve wine, friend",
-#     "Water": 0.50}
-#   request = input("Enter your sacrament: ")
-#   if request in drinks:
-#     price = drinks.get(request)
-#     if price:
-#       print(request, "is available for", f"${price:.2f}")
-#     else:
-#       print(drinks[request])  # Print the unavailability message for wine
-#     thank_customer()
-#   else:
-#     print("Processing...")
-#     time.sleep(1)
-#     print(request, "This sacrament is not available")
-
-# def thank_customer():
-#   print("Have a blessed day")
-
-# hello_message()
+def process_order():
+  choose_pizza_size()
+  choose_toppings()
+  choose_drink()
+  ask_another_order()
+  
+  # Start order process
+  greet_customer()
+  process_order()
+  
