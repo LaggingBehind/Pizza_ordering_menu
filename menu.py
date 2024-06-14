@@ -1,5 +1,7 @@
 order_list = []
 
+# Menu's
+
 pizza_menu = {
     1: {"name": "Large", "price": 9.99},
     2: {"name": "Medium", "price": 6.99},
@@ -28,6 +30,7 @@ def greet_customer():
     print("Welcome to Cheesus Crust Pizza!")
     print("How may we serve thee?")
 
+# Numarical size selecton
 
 def choose_pizza_size():
     global total_cost
@@ -48,6 +51,7 @@ def choose_pizza_size():
         except ValueError:
             print("Invalid, Please enter a number.")
 
+# Multiple topping selection
 
 def choose_toppings():
     global total_cost
@@ -66,6 +70,7 @@ def choose_toppings():
         else:
             print(f"{topping_choice} is not available")
 
+# Drink selection
 
 def choose_drink():
     global total_cost
@@ -89,6 +94,7 @@ def choose_drink():
         else:
             print(f"{drink_choice} is not available")
 
+# y/n loop
 
 def ask_another_order():
     while True:
